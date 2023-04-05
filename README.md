@@ -1,6 +1,6 @@
 # QRCard
 
-QRCard é um serviço online em Laravel que permite aos usuários criar e personalizar seu cartão de visita digital de forma fácil e rápida.
+QRCard é um serviço online em Laravel que permite aos usuários criar seu cartão de visita digital de forma fácil e rápida.
 
 ## Documentação da API
 
