@@ -34,9 +34,14 @@ class PersonController extends Controller
         return response()->download(storage_path('app/'.$imagePath))->deleteFileAfterSend();
     }
 
-    public function findPersonByName(Request $request)
+    public function findPersonById(Request $request)
     {
-        $data = $this->findPersonUseCase->execute(['id' => $request->idBySearch]);
-        return response()->json($data, 200);
+        $data = $this->findPersonUseCase->execute(['id' => $request->userId]);
+
+        if($data){
+            return view('user');
+        }
+
+        return view('userNotFound');
     }
 }
