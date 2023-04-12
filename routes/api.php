@@ -8,5 +8,5 @@ Route::group([
 'middleware' => ['cors']
 ], function ($router) {
         Route::post('/people',[PersonController::class,'createPerson']);
-        Route::get('/people/{idBySearch}',[PersonController::class,'findPersonByName']);
+        // Route::get('/people/{idBySearch}',[PersonController::class,'findPersonByName']);
 });
