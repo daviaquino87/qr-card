@@ -16,15 +16,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('form');
-});
-
-Route::get('/user/{userId}', [PersonController::class,'findPersonById']);
-
-
-Route::get('/docs', function(){
     return view('docs');
 });
+
 
 Route::fallback(function () {
     return view('errors.404');

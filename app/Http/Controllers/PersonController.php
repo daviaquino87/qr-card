@@ -39,16 +39,9 @@ class PersonController extends Controller
         $data = $this->findPersonUseCase->execute(['id' => $request->userId]);
 
         if($data){
-            $person = [
-                'name' => $data->name,
-                'email' => $data->email,
-                'github' => $data->github,
-                'linkedin' => $data->linkedin,
-            ];
-
-            return view('user',['person' => $person]);
+            return response()->json($data);
         }
 
-        return view('userNotFound');
+        return response()->json(['message' => 'user not found']);
     }
 }
