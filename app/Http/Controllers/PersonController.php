@@ -36,7 +36,7 @@ class PersonController extends Controller
 
     public function findPersonById(Request $request)
     {
-        $data = $this->findPersonUseCase->execute(['id' => $request->userId]);
+        $data = $this->findPersonUseCase->execute(['id' => $request->idBySearch]);
 
         if($data){
             return response()->json($data);
